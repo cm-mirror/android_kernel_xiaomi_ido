@@ -736,15 +736,22 @@ static int fb_notifier_callback(struct notifier_block *self,
 	if (evdata && evdata->data && event == FB_EVENT_BLANK &&
 		ft5x06_data && ft5x06_data->client) {
 		blank = evdata->data;
-		if (*blank == FB_BLANK_UNBLANK)
-		   schedule_work(&ft5x06_data->fb_notify_work);
-		 else if (*blank == FB_BLANK_POWERDOWN) {
-			flush_work(&ft5x06_data->fb_notify_work);
-			ft5x06_ts_suspend(&ft5x06_data->client->dev);
+		switch (*blank) {
+			case FB_BLANK_UNBLANK:
+				pr_info("ft5x06 resume!\n");
+				ft5x06_ts_resume(&ft5x06_data->client->dev);
+				break;
+			case FB_BLANK_POWERDOWN:
+			case FB_BLANK_HSYNC_SUSPEND:
+			case FB_BLANK_VSYNC_SUSPEND:
+			case FB_BLANK_NORMAL:
+				pr_info("ft5x06 suspend!\n");
+				ft5x06_ts_suspend(&ft5x06_data->client->dev);
+				break;
 		}
 	}
 
-	return 0;
+	return NOTIFY_OK;
 }
 #elif defined(CONFIG_HAS_EARLYSUSPEND)
 static void ft5x06_ts_early_suspend(struct early_suspend *handler)
