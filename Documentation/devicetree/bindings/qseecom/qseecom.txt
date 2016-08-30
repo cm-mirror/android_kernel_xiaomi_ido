@@ -9,10 +9,10 @@ Required properties:
 - qcom,hlos-num-ce-hw-instances : indicates number of CE HW instances hlos can use.
 - qcom,hlos-ce-hw-instance : indicates what CE HW is used by HLOS crypto driver
 - qcom,qsee-ce-hw-instance : indicates what CE HW is used by secure domain (TZ) crypto driver
-- qcom, msm_bus,name: Should be "qseecom-noc"
-- qcom, msm_bus,num_cases: Depends on the use cases for bus scaling
-- qcom, msm_bus,num_paths: The paths for source and destination ports
-- qcom, msm_bus,vectors: Vectors for bus topology.
+- qcom,msm_bus,name: Should be "qseecom-noc"
+- qcom,msm_bus,num_cases: Depends on the use cases for bus scaling
+- qcom,msm_bus,num_paths: The paths for source and destination ports
+- qcom,msm_bus,vectors: Vectors for bus topology.
 - qcom,ce-opp-freq: indicates the CE operating frequency in Hz, changes from target to target.
 
 Optional properties:

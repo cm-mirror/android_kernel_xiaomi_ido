@@ -13,7 +13,7 @@ Required properties:
   property defined.
 - clock-names : names of clocks required for the device.
 - clocks : clocks required for the device.
-- qcom, clock-rates: rates of the required clocks.
+- qcom,clock-rates: rates of the required clocks.
 - vdd-supply: phandle to GDSC regulator controlling JPEG core.
 
 Example:

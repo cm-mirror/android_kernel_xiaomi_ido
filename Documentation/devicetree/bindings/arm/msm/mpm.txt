@@ -8,7 +8,7 @@ RPM interface.
 
 The required nodes for the MPM driver are:
 
-- compatible: "qcom, mpm-v2"
+- compatible: "qcom,mpm-v2"
 - reg: Specifies the base physical address(s) and the size of the MPM
 	registers. The MPM driver access two memory regions for confifure the
 	virtual MPM driver on the RPM. The first region is the memory space

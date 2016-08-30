@@ -2437,7 +2437,7 @@ static int apq8074_asoc_machine_probe(struct platform_device *pdev)
 	if (pdata->mclk_gpio < 0) {
 		dev_err(&pdev->dev,
 			"Looking up %s property in node %s failed %d\n",
-			"qcom, cdc-mclk-gpios", pdev->dev.of_node->full_name,
+			"qcom,cdc-mclk-gpios", pdev->dev.of_node->full_name,
 			pdata->mclk_gpio);
 		ret = -ENODEV;
 		goto err;

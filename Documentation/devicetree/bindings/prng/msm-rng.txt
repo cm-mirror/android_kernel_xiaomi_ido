@@ -3,10 +3,10 @@
 Required properties:
 - compatible : Should be "qcom,msm-rng"
 - reg        : Offset and length of the register set for the device
-- qcom, msm_bus,name: Should be "msm-rng-noc"
-- qcom, msm_bus,num_cases: Depends on the use cases for bus scaling
-- qcom, msm_bus,num_paths: The paths for source and destination ports
-- qcom, msm_bus,vectors: Vectors for bus topology.
+- qcom,msm_bus,name: Should be "msm-rng-noc"
+- qcom,msm_bus,num_cases: Depends on the use cases for bus scaling
+- qcom,msm_bus,num_paths: The paths for source and destination ports
+- qcom,msm_bus,vectors: Vectors for bus topology.
 
 
 Optional property:

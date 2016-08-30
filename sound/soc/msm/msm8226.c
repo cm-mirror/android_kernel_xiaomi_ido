@@ -2313,7 +2313,7 @@ static int msm8226_asoc_machine_probe(struct platform_device *pdev)
 	if (pdata->mclk_gpio < 0) {
 		dev_err(&pdev->dev,
 			"Looking up %s property in node %s failed %d\n",
-			"qcom, cdc-mclk-gpios", pdev->dev.of_node->full_name,
+			"qcom,cdc-mclk-gpios", pdev->dev.of_node->full_name,
 			pdata->mclk_gpio);
 		ret = -ENODEV;
 		goto err;
@@ -2377,7 +2377,7 @@ static int msm8226_asoc_machine_probe(struct platform_device *pdev)
 	if (vdd_spkr_gpio < 0) {
 		dev_dbg(&pdev->dev,
 			"Looking up %s property in node %s failed %d\n",
-			"qcom, cdc-vdd-spkr-gpios",
+			"qcom,cdc-vdd-spkr-gpios",
 			pdev->dev.of_node->full_name, vdd_spkr_gpio);
 	} else {
 		ret = gpio_request(vdd_spkr_gpio, "TAPAN_CODEC_VDD_SPKR");
@@ -2395,7 +2395,7 @@ static int msm8226_asoc_machine_probe(struct platform_device *pdev)
 	if (ext_spk_amp_gpio < 0) {
 		dev_err(&pdev->dev,
 			"Looking up %s property in node %s failed %d\n",
-			"qcom, cdc-lineout-spkr-gpios",
+			"qcom,cdc-lineout-spkr-gpios",
 			pdev->dev.of_node->full_name, ext_spk_amp_gpio);
 	} else {
 		ret = gpio_request(ext_spk_amp_gpio,

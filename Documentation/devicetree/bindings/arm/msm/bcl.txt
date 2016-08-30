@@ -157,12 +157,12 @@ Required Parameters:
 		high threshold.
 - qcom,ibat-scaling-factor: The scaling factor to be used for converting
 		the raw ibat ADC value to micro-amps.
-- qcom, ibat-gain-numerator: The numerator of the ibat gain correction factor.
-- qcom, ibat-gain-denominator: The denominator of the ibat gain correction
+- qcom,ibat-gain-numerator: The numerator of the ibat gain correction factor.
+- qcom,ibat-gain-denominator: The denominator of the ibat gain correction
 		factor.
-- qcom, ibat-offset-numerator: The numerator of the ibat offset correction
+- qcom,ibat-offset-numerator: The numerator of the ibat offset correction
 		factor.
-- qcom, ibat-offset-denominator: The denominator of the ibat offset
+- qcom,ibat-offset-denominator: The denominator of the ibat offset
 		correction factor.
 - qcom,ibat-polling-delay-ms: Software polling interval for monitoring ibat
 		low threshold.

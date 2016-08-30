@@ -4063,7 +4063,7 @@ static int parse_bms_dt_properties(struct qpnp_bms_chip *chip)
 	chip->dt.cfg_use_reported_soc = of_property_read_bool(
 			chip->spmi->dev.of_node, "qcom,use-reported-soc");
 	chip->dt.cfg_current_report_eoc = of_property_read_bool(
-			chip->spmi->dev.of_node, "qcom, current-report-eoc");
+			chip->spmi->dev.of_node, "qcom,current-report-eoc");
 	pr_debug("v_cutoff_uv=%d, max_v=%d\n", chip->dt.cfg_v_cutoff_uv,
 					chip->dt.cfg_max_voltage_uv);
 	pr_debug("r_conn=%d shutdown_soc_valid_limit=%d low_temp_threshold=%d ibat_avg_samples=%d\n",
